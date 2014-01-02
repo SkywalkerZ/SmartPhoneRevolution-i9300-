@@ -1,0 +1,498 @@
+unmount("/system");
+set_progress(0.42);
+ui_print("INSTALLATION STARTED");
+ui_print("*********************");
+ui_print("Wiping Dalvik Cache");
+##################################################################################
+##                          WIPING DALVIK
+
+mount("ext4", "EMMC", "/dev/block/mmcblk0p12", "/data");
+delete_recursive("/data/dalvik-cache");
+
+##################################################################################
+##                      MOUNTING PARTITIONS
+
+mount("ext4", "EMMC", "/dev/block/mmcblk0p9", "/system");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p12", "/data");
+
+##################################################################################
+##                          APPS
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.1") == "1"
+then
+ui_print("Installing AllShare and GroupPlay");
+set_progress(0.62);
+package_extract_dir("bloat/allshare", "/system");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.2") == "1"
+then
+ui_print("Installing Analog Clock");
+set_progress(0.62);
+package_extract_dir("bloat/analogclock", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.3") == "1"
+then
+ui_print("Installing Calculator");
+set_progress(0.62);
+package_extract_dir("bloat/calc", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.4") == "1"
+then
+ui_print("Installing Calendar");
+set_progress(0.62);
+package_extract_dir("bloat/calendar", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.5") == "1"
+then
+ui_print("Installing ChatOn app");
+set_progress(0.62);
+package_extract_dir("bloat/chaton", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.6") == "1"
+then
+ui_print("Installing Clipboard saveservice");
+set_progress(0.63);
+package_extract_dir("bloat/clipboard", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.7") == "1"
+then
+ui_print("Installing Digital Clock");
+set_progress(0.63);
+package_extract_dir("bloat/digitalclock", "/system/app");
+endif;
+	
+if file_getprop("/tmp/aroma-data/apps.prop","item.0.8") == "1"
+then
+ui_print("Installing Dual Clock");
+set_progress(0.67);
+package_extract_dir("bloat/dualclock", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.9") == "1"
+then
+ui_print("Installing Divx support");
+set_progress(0.64);
+package_extract_dir("bloat/divx", "/data/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.10") == "1"
+then
+ui_print("Installing DropBox");
+set_progress(0.65);
+package_extract_dir("bloat/dropbox", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.11") == "1"
+then
+ui_print("Installing DSM forwarding");
+set_progress(0.66);
+package_extract_dir("bloat/dsmforwarding", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.12") == "1"
+then
+ui_print("Installing ELMAgent");
+set_progress(0.67);
+package_extract_dir("bloat/elmaagent", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.13") == "1"
+then
+ui_print("Installing Flash Player");
+set_progress(0.67);
+package_extract_dir("bloat/flashplayer", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.14") == "1"
+then
+ui_print("Installing Fm Radio");
+set_progress(0.68);
+package_extract_dir("bloat/fmradio", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.15") == "1"
+then
+ui_print("Installing Kies support");
+set_progress(0.69);
+package_extract_dir("bloat/kies", "/system");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.16") == "1"
+then
+ui_print("Installing LCD Test");
+set_progress(0.70);
+package_extract_dir("bloat/lcdtest", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.17") == "1"
+then
+ui_print("Installing Mobile print");
+set_progress(0.73);
+package_extract_dir("bloat/mobileprint", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.18") == "1"
+then
+ui_print("Installing My Files");
+set_progress(0.73);
+package_extract_dir("bloat/myfiles", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.19") == "1"
+then
+ui_print("Installing PageBuddy");
+set_progress(0.75);
+package_extract_dir("bloat/pagebuddy", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.20") == "1"
+then
+ui_print("Installing Paper Arstist");
+set_progress(0.76);
+package_extract_dir("bloat/paperartist", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.21") == "1"
+then
+ui_print("Installing Polaris Viewer");
+set_progress(0.76);
+package_extract_dir("bloat/polaris", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.22") == "1"
+then
+ui_print("Installing S Voice");
+set_progress(0.78);
+package_extract_dir("bloat/svoice", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.23") == "1"
+then
+ui_print("Installing S Suggest");
+set_progress(0.78);
+package_extract_dir("bloat/ssuggest", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.24") == "1"
+then
+ui_print("Installing S Cloud");
+set_progress(0.78);
+package_extract_dir("bloat/scloud", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.25") == "1"
+then
+ui_print("Installing S Memo");
+set_progress(0.78);
+package_extract_dir("bloat/smemo", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.26") == "1"
+then
+ui_print("Installing Voice Recorder");
+set_progress(0.78);
+package_extract_dir("bloat/voicerecorder", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.27") == "1"
+then
+ui_print("Installing Voice Search");
+set_progress(0.78);
+package_extract_dir("bloat/voicesearch", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.28") == "1"
+then
+ui_print("Installing Yahoo Widgets");
+set_progress(0.78);
+package_extract_dir("bloat/yahoo", "/data/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/apps.prop","item.0.29") == "1"
+then
+ui_print("Installing Youtube HD");
+set_progress(0.78);
+package_extract_dir("bloat/youtube", "/data/app");
+endif;
+
+#########################################################################
+##                          LWP APPS
+
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.1") == "1"
+then
+ui_print("Installing Luminous Dots");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/LuminousDots.apk", "/data/app/LuminousDots.apk");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.2") == "1"
+then
+ui_print("Installing Basic Dreams");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/BasicDreams.apk", "/data/app/BasicDreams.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.3") == "1"
+then
+ui_print("Installing Deep Sea");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/DeepSea.apk", "/data/app/DeepSea.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.4") == "1"
+then
+ui_print("Installing Noise Field");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/NoiseField.apk", "/data/app/NoiseField.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.5") == "1"
+then
+ui_print("Installing Phase Beam");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/PhaseBeam.apk", "/data/app/PhaseBeam.apk");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.7") == "1"
+then
+ui_print("Installing Photo Table");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/PhotoTable.apk", "/data/app/PhotoTable.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.8") == "1"
+then
+ui_print("Installing Photo Wall");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/PhotoWall.apk", "/data/app/PhotoWall.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.9") == "1"
+then
+ui_print("Installing Topic Wall");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/TopicWall.apk", "/data/app/TopicWall.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/livewall.prop","item.0.10") == "1"
+then
+ui_print("Installing Weather Wall");
+set_progress(0.78);
+package_extract_file("bloat/livewallpapers/WeatherWall.apk", "/data/app/WeatherWall.apk");
+endif;
+
+###########################################################################################
+##                          GOOGLE APPS
+
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.1") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Chrome");
+set_progress(0.79);
+package_extract_dir("bloat/googlechrome", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.2") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Feedback");
+set_progress(0.80);
+package_extract_dir("bloat/googlefeedback", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.3") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Plus");
+set_progress(0.81);
+package_extract_dir("bloat/googleplus", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.4") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Hangouts");
+set_progress(0.82);
+package_extract_dir("bloat/googlehangouts", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.5") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Gmail");
+set_progress(0.82);
+package_extract_dir("bloat/googlemail", "/system/app");
+endif;
+	
+if
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.6") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Maps");
+set_progress(0.82);
+package_extract_dir("bloat/googlemaps", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.7") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Play Games");
+set_progress(0.82);
+package_extract_dir("bloat/googlegames", "/system/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/gapps.prop","item.0.7") == "1"
+then
+package_extract_dir("bloat/googleservices", "/system/app");
+ui_print("Installing Google Play Magazines");
+set_progress(0.82);
+package_extract_dir("bloat/googlemagazines", "/system/app");
+endif;
+
+##################################################################################
+##                          SAMSUNG APPS
+
+if 
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.1") == "1"
+then
+ui_print("Installing GameHub");
+set_progress(0.88);
+package_extract_dir("bloat/sservices", "/system/app");
+package_extract_file("bloat/shub/GameHub.apk", "/system/app/GameHub.apk");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.2") == "1"
+then
+ui_print("Installing HelpHub");
+set_progress(0.89);
+package_extract_dir("bloat/sservices", "/system/app");
+package_extract_file("bloat/shub/HelpHub.apk", "/system/app/HelpHub.apk");
+endif;
+	
+if
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.3") == "1"
+then
+ui_print("Installing MusicHub");
+set_progress(0.90);
+package_extract_dir("bloat/sservices", "/system/app");
+package_extract_file("bloat/shub/MusicHub.apk", "/system/app/MusicHub.apk");
+endif;
+	
+if
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.4") == "1"
+then
+ui_print("Installing VideoHub");
+set_progress(0.91);
+package_extract_dir("bloat/sservices", "/system/app");
+package_extract_file("bloat/shub/VideoHub.apk", "/system/app/VideoHub.apk");
+endif;
+
+if
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.5") == "1"
+then
+ui_print("Installing Gear");
+set_progress(0.91);
+package_extract_dir("bloat/sgear", "/system/app");
+endif;
+
+if
+file_getprop("/tmp/aroma-data/sapps.prop","item.0.5") == "1"
+then
+ui_print("Installing Gear");
+set_progress(0.91);
+package_extract_dir("bloat/sbloomberg", "/system/app");
+endif;
+
+##################################################################################
+##                          ADDON APPS
+
+if 
+file_getprop("/tmp/aroma-data/xapps.prop","item.0.1") == "1"
+then
+ui_print("Installing Xposed");
+set_progress(0.88);
+package_extract_dir("bloat/xposed", "/system/app");
+endif;
+	
+if 
+file_getprop("/tmp/aroma-data/xapps.prop","item.0.2") == "1"
+then
+ui_print("Installing Wanam Xposed");
+set_progress(0.89);
+package_extract_dir("bloat/xposed", "/system/app");
+package_extract_dir("bloat/xposedwanam", "/data/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/xapps.prop","item.0.2") == "1"
+then
+ui_print("Installing Greenify");
+set_progress(0.89);
+package_extract_dir("bloat/greenify", "/data/app");
+endif;
+
+if 
+file_getprop("/tmp/aroma-data/xapps.prop","item.0.2") == "1"
+then
+ui_print("Installing LG G2 camera");
+set_progress(0.89);
+package_extract_dir("bloat/lgcamera", "/data/app");
+endif;
+	
+unmount("/data");
+unmount("/system");
+
+
+ui_print("*********************");
+ui_print("INSTALLATION FINISHED");

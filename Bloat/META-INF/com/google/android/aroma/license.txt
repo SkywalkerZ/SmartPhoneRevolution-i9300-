@@ -1,0 +1,69 @@
+<@center><#33B5E5><b><u>Bloat Included</u></b></#>
+
+Allshare cast
+Analog clock
+Calculator
+Calendar
+Chanton
+Chrome
+Clipboard
+Digital clock
+Divx
+Dropbox
+DSM forwarding
+Dual clock
+Elma agent
+Flashplayer
+FM radio(note 3)
+Kies
+Lcd test
+Mobile print
+My files
+Page buddy
+Paper artist
+Play magazines
+Play music
+play games
+S cloud
+S memo(note 3)
+S voice
+Voice recorder
+Voice search
+Yahoo
+Youtube HD(Note 30
+
+<b><u>Live wallpapers</u></b>
+ -Basic dreams
+ -Deep sea
+ -Noisefield
+ -Phase beam
+ -Sun beam
+ -Photo table
+ -Photo wall
+ -Topic wall
+ -Weather wall
+ -Luminous dots
+ 
+<b><u>Play apps</u></b>
+ -Gmail
+ -Google feedback
+ -Google plus
+ -Googles search widget
+ -Hangout 2
+ -Maps(Nexus 5)
+
+<b><u>Samsung apps</u></b>
+ -Apps services
+ -More services
+ -Pickup tutorial
+ -Samsung apps
+ -S suggest
+ -Gamehub
+ -Help hub
+ -Music gub
+ -Video hub
+ -Gear
+ 
+<b><u>Xposed apps</u></b>
+ -Xposed framework
+ -Wanal xposed
