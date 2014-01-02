@@ -1,0 +1,6 @@
+#!/sbin/sh
+
+reboot recovery
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

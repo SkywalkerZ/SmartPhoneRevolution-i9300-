@@ -1,0 +1,146 @@
+<@center><#33B5E5><b><u>Changelog</u></b></#>
+
+<#33B5E5><b><u>V6.0 CHRISTMAS VERSION</u></b></#>
+Removed CSC
+Disabled bitcode verification
+Added note 3 keyboard
+Theming system
+Updated superSU and binary(1.86)
+SU binaries now called as a daemon
+Updated ESFileExplorer
+Added terminal
+Added Googymax(V2) kernel
+
+Framework themes-
+Stock SPR
+Blue
+Red
+Purple
+Green
+Orange
+Pink
+White
+Stock
+
+icons-
+Stock SPR
+AOSP
+iOS
+Sense 5
+Xperia
+Kitkat
+Windows Phone
+MIUI
+Stock
+
+Statusbars-
+Stock SPR
+iOS
+Xperia
+Kitkat
+Sense 5
+AOSP
+Stock
+
+<#33B5E5><b><u>V5.0 STABLE</u></b></#>
+Fixed multiwindow
+Fixed gapps FC 
+Fixed syncing
+Half fixed smart stay
+Integrated superSU in settings
+Speed/battery tweaks
+Browser is faster/more stable
+Settings enhanced
+More languages
+CSC tweaks
+
+<#33B5E5><b><u>V4.0 BETA</u></b></#>
+updated base to the latest firmware MK6.
+added settings picture
+new kernel
+added init.d support
+sbrowser speed tweaks
+new camera base
+enabled entropy on boot
+
+<#33B5E5><b><u>V3.0 PRIVATE BUILD</u></b></#>
+note 3 broswer
+smart scroll for browser
+fixed browser hotseat issue
+fixed screen mirroring
+fixed folder on launcher
+fixed lockscreen wallpaper
+Note 3 Multimedia App Framework(MMAF)
+Note 3 MusicFX
+fixed music stutter
+battery saving tweaks
+removed walkman(apps, framework, libs, permissions)
+call recording
+disabled ongoing notifications(swipe to remove any)
+longpress menu to kill
+A few other things..
+
+<#33B5E5><b><u>V2.6 UPDATE PACKAGE</u></b></#>
+Fixed folders
+Fixed "set lockscreen wallpaper"
+
+<#33B5E5><b><u>V2.5 STABLE</u></b></#>
+No longer in beta stages
+smart options(thanks henrylife)
+smart stay
+smart pause
+smart scroll(not usable until i port Sbrowser)
+removed boot sounds
+even more build.prop tweaks
+SDcard read boosted(readahead KB 2048)
+disabled journalism
+better busybox mount config
+best LMK configuration-
+more free ram
+removed logger
+vm tweaks
+internet speed tweaks(thanks knzo)
+rendered UI with GPU
+scrolling velocity smoother
+message failed to send autoretries 3 times more
+improved speech quality
+googles DNS now set by build.prop
+defragged databases
+better touch sensitivity
+video player from note 3
+stock music player(bloat)
+bloomberg(bloat)
+removed Sony movies
+added update option in aroma
+fixed email background
+more rom information in settings
+note 3 ui sounds
+Note 3 email
+
+<#33B5E5><b><u>V2.0 STABLE</u></b></#>
+ported htc sense 5 statusbar icons
+ported the new note 3 launcher
+themed note 3 launcher(transparent-ish)
+ported note 3 gallery
+ported note 3 accuweather with autorefresh every 6hrs
+added youtube hd 
+less bloat
+added xposed and wanam xposed to bloat installer
+fixed set lockscreen background bug
+fixed camera gallery bug
+6% more battery life
+more speed tweaks
+more build.prop tweaks
+updated su binary
+updated su app
+updated aroma
+uses googles dns server
+added aroma option to backup EFS
+added aroma option to wipe data partition(without touching SDcard)
+unlimited multiwindow apps
+Left side clock
+Updated adblocking hosts
+MORE I FORGOT
+
+<#33B5E5><b><u>V1.0 BETA</u></b></#>
+initial release

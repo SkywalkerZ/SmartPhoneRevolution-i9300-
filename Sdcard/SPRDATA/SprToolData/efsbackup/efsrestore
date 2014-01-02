@@ -1,0 +1,9 @@
+#!/sbin/sh
+
+#Mounts
+mount -o rw,remount /efs
+dd if=/sdcard/SPRDATA/SprToolData/efsbackup/efs.img of=/dev/block/mmcblk0p3 bs=4096
+reboot
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

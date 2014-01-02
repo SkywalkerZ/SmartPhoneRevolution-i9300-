@@ -1,0 +1,17 @@
+#!/sbin/sh
+
+mount /dev/block/mmcblk0p12 /data
+
+cd /data
+FILES=(*)
+for i in "${FILES[@]}"; do
+if [ "$i" != "media" ]
+then rm -R "$i"
+fi
+done
+
+unmount /data
+exit
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

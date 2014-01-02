@@ -1,0 +1,18 @@
+#!/sbin/sh
+
+#Mounts
+mount /dev/block/mmcblk0p8 /cache
+
+#Directory
+if [ ! -d /cache/recovery ];then
+	mkdir /cache/recovery
+fi
+
+#Unmounts
+unmount /cache
+
+#Exit
+exit
+
+#By Ricky310711
+#To be applied after unpacking rom but before flashing modem

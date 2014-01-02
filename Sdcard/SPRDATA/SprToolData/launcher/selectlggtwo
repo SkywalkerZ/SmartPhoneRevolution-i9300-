@@ -1,0 +1,29 @@
+#!/system/bin/sh
+
+mount -o rw,remount /system
+rm /system/app/SecLauncher2.apk
+rm /system/app/SecLauncher4.apk
+rm /system/app/Trebuchet.apk
+rm /system/app/GoogleHome.apk
+rm /system/app/Velvet.apk
+rm /system/app/PrebuiltGmsCore.apk
+rm /system/app/SecLauncher2.odex
+rm /system/app/SecLauncher4.odex
+rm /system/app/Trebuchet.odex
+rm /system/app/GoogleHome.odex
+rm /system/app/Velvet.odex
+rm /system/app/PrebuiltGmsCore.odex
+rm /system/app/LGHome.apk
+rm /system/app/LGHome.odex
+rm /system/app/XperiaHome.apk
+rm /system/app/XperiaHome.odex
+rm /system/media/audio/ui/Homescreen_Remove.ogg
+rm /system/mdia/audio/ui/Homescreen_Uninstall.ogg
+cp /sdcard/SPRDATA/SprToolData/launcher/launcher/LGHome.apk /system/app/
+cp /sdcard/SPRDATA/SprToolData/launcher/sounds/Homescreen_Remove.ogg /system/media/audio/ui/
+cp /sdcard/SPRDATA/SprToolData/launcher/sounds/Homescreen_Uninstall.ogg /system/media/audio/ui/
+chmod 644 /system/app/LGHome.apk
+chmod 644 /system/media/audio/ui/Homescreen_Remove.ogg
+chmod 644 /system/mdia/audio/ui/Homescreen_Uninstall.ogg
+mount -o ro,remount /system
+reboot

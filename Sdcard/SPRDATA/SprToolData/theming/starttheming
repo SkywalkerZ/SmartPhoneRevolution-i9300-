@@ -1,0 +1,8 @@
+#!/sbin/sh
+
+cp /sdcard/SPRDATA/SprToolData/theming/theme.zip /sdcard/
+echo "install /sdcard/theme.zip" >> /cache/recovery/openrecoveryscript
+reboot recovery
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

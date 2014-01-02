@@ -1,0 +1,6 @@
+#!/sbin/sh
+
+killall system_server
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

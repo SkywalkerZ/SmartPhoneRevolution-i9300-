@@ -1,0 +1,12 @@
+#!/sbin/sh
+
+mount /dev/block/mmcblk0p12 /data
+
+rm -r /data/dalvik-cache
+reboot
+
+unmount /data
+exit
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

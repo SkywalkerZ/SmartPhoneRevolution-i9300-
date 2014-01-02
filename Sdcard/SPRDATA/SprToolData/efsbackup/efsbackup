@@ -1,0 +1,16 @@
+#!/sbin/sh
+
+#Mounts
+mount -o rw,remount /efs
+
+#Raw backup
+dd if=/dev/block/mmcblk0p3 of=/sdcard/SPRDATA/SprToolData/efsbackup/efs.img
+
+#Unmount
+mount -o ro,remount /efs
+
+#Exit
+exit
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL

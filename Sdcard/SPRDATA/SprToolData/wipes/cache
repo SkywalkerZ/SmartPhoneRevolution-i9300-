@@ -1,0 +1,12 @@
+#!/sbin/sh
+
+mount /dev/block/mmcblk0p8 /cache
+
+rm -r /cache
+reboot
+
+unmount /cache
+exit
+
+#By Ricky310711
+#Copyright SPRTools ditributed under the GNU GPL
