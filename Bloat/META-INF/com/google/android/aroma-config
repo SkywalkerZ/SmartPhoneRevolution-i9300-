@@ -159,7 +159,7 @@ checkbox(
 	  "xapps.prop",	
 
         "Xposed Framework","Will automatically install",0,
-	    "Wanam Xposed","Will automatically install",0
+	    "Wanam Xposed","Will automatically install",0,
 	    "Greenify","",0,
 		"LG G2 Camera","Working",0  
 
